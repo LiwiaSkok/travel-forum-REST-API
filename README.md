@@ -1,6 +1,6 @@
-# ✈️ Razem Przez Świat
+![logo](/screenshots/logo1.png)
 
-> **Travel Forum & Blog**  
+> **Travel Forum**  
 > Aplikacja webowa „Razem Przez Świat” pozwala na tworzenie, przeglądanie i zarządzanie postami podróżniczymi z funkcjami komentarzy, lajków oraz filtrowania po kraju. Udostępnia też pełne REST API dla CRUD w formacie JSON.
 
 ---
