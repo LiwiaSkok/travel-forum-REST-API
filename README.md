@@ -105,11 +105,8 @@ Zobacz aplikację w akcji:
 ![](screenshots/delete-comment.png)
 
 ### 🌐 Filtrowanie według kraju
-![](screenshots/list.png)  
 ![](screenshots/tag.png)  
-![](screenshots/tag2.png)  
+![](screenshots/list.png)   
 ![](screenshots/tag3.png)
 
-### 🎨 Design aplikacji
-![](screenshots/design.png)
 
