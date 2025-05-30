@@ -88,7 +88,7 @@ Zobacz aplikację w akcji:
 
 > Widok główny aplikacji z listą postów oraz możliwością filtrowania według kraju.
 
-**📷 Strona główna z menu krajów**
+**📷 Strona główna**
 <p align="center">
   <img src="screenshots/home-page3.png" alt="Strona główna">
 </p>
@@ -141,29 +141,97 @@ Zobacz aplikację w akcji:
 </p>
 
 
-### 🗑️ Usuwanie zdjęcia
+### 🗑️ Usuwanie zdjęcia z posta
 
+> Możesz usunąć pojedyncze zdjęcie z posta podczas edycji.
+
+**📷 Obecne zdjęcie i opcja usunięcia**
 <p align="center">
-  <img src="screenshots/delete-photo.png" alt="Usuwanie zdjęcia 1">
-  <img src="screenshots/delete-photo2.png" alt="Usuwanie zdjęcia 2">
+  <img src="screenshots/delete-photo.png" alt="Usuń zdjęcie 1">
 </p>
 
-### 💬 Komentarze
-
+**📷 Drugie zdjęcie z opcją do usunięcia**
 <p align="center">
-  <img src="screenshots/add-comment.png" alt="Komentarz 1">
-  <img src="screenshots/add-comment2.png" alt="Komentarz 2">
-  <img src="screenshots/add-comment3.png" alt="Komentarz 3">
-  <img src="screenshots/add-comment4.png" alt="Komentarz 4">
+  <img src="screenshots/delete-photo2.png" alt="Usuń zdjęcie 2">
+</p>
+
+---
+
+### ❤️ Lajkowanie i 💬 komentowanie postów
+
+> Użytkownicy mogą zostawiać komentarze i serduszka pod postami.
+
+**📷 Post z komentarzem i 5 lajkami**
+<p align="center">
+  <img src="screenshots/add-comment.png" alt="Komentarz i lajk">
+</p>
+
+**📷 Lista komentarzy z ikonami i menu opcji**
+<p align="center">
+  <img src="screenshots/add-comment2.png" alt="Lista komentarzy">
+</p>
+
+---
+
+### 🗨️ Widok komentarzy pod postem
+
+> Sekcja komentarzy z możliwością dodania nowego wpisu.
+
+**📷 Widok posta z komentarzami i polem dodawania**
+<p align="center">
+  <img src="screenshots/add-comment3.png" alt="Dodaj komentarz">
+</p>
+
+**📷 Lista komentarzy pod postem – różne treści**
+<p align="center">
+  <img src="screenshots/add-comment4.png" alt="Komentarze użytkowników">
+</p>
+
+---
+
+### ✏️ Edycja komentarza
+
+> Komentarze można również edytować lub usunąć.
+
+**📷 Menu opcji komentarza: edytuj lub usuń**
+<p align="center">
+  <img src="screenshots/edit-comment.png" alt="Opcje komentarza">
+</p>
+
+**📷 Formularz edycji komentarza**
+<p align="center">
+  <img src="screenshots/edit-comment2.png" alt="Edytowanie komentarza">
+</p>
+
+---
+
+### 🗑️ Usuwanie komentarza
+
+> Komentarz można bezpiecznie usunąć jednym kliknięciem.
+
+**📷 Przykład komentarza z przyciskiem „Usuń”**
+<p align="center">
   <img src="screenshots/delete-comment.png" alt="Usuwanie komentarza">
 </p>
 
-### 🌐 Filtrowanie według kraju
+### 🌍 Filtrowanie postów po kraju
 
+> Aplikacja umożliwia filtrowanie postów według kraju podróży.  
+> Po kliknięciu w nazwę kraju (np. **Włochy**) użytkownik zostaje przeniesiony do strony `/Włochy`, gdzie widoczne są tylko posty z tego kraju.
+
+**📷 Lista krajów z flagami – filtracja według państwa**
 <p align="center">
-  <img src="screenshots/tag.png" alt="Tag kraju 1">
-  <img src="screenshots/list.png" alt="Lista krajów">
-  <img src="screenshots/tag3.png" alt="Tag kraju 2">
+  <img src="screenshots/tag.png" alt="Dropdown filtrujący posty po kraju">
+</p>
+
+**📷 Rozwijane menu „Relacje z podróży” z ikonami flag**
+<p align="center">
+  <img src="screenshots/list.png" alt="Lista krajów – dropdown">
+</p>
+
+**📷 Przykład działania filtra – tylko posty z Włoch**
+<p align="center">
+  <img src="screenshots/tag3.png" alt="Widok z przefiltrowanymi postami z Włoch">
 </p>
 
 
