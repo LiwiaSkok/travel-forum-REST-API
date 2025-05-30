@@ -84,49 +84,60 @@ Zobacz aplikację w akcji:
 
 ## 🖼️ Ekrany aplikacji
 
-### 🏠 Strona główna – przegląd postów
+### 🏠 Strona główna – lista postów
 
-> Widok listy wszystkich postów z możliwością filtrowania po kraju i dodania nowego wpisu.
+> Widok główny aplikacji z listą postów oraz możliwością filtrowania według kraju.
 
+**📷 Strona główna z menu krajów**
 <p align="center">
-  <img src="screenshots/home-page3.png" alt="Strona główna – lista postów i menu krajów">
+  <img src="screenshots/home-page3.png" alt="Strona główna">
 </p>
 
 ---
 
-### ➕ Dodawanie posta – formularz
+### ➕ Dodawanie posta
 
-> Użytkownik może utworzyć nowy post podróżniczy, dodając dane i zdjęcia.
+> Formularz umożliwiający dodanie nowego wpisu z danymi i zdjęciami.
 
+**📷 Pusty formularz dodawania posta**
 <p align="center">
   <img src="screenshots/add-post.png" alt="Formularz dodawania nowego posta – pusty">
-  <br/><sub>🔹 Pusty formularz dodawania posta</sub><br/><br/>
+</p>
 
-  <img src="screenshots/add-post2.png" alt="Wypełnianie formularza posta">
-  <br/><sub>🔹 Uzupełnianie danych: tytuł, treść, miejsce, zdjęcia, kraj</sub><br/><br/>
+**📷 Wypełnianie formularza posta**
+<p align="center">
+  <img src="screenshots/add-post2.png" alt="Uzupełnianie danych posta">
+</p>
 
-  <img src="screenshots/add-post3.png" alt="Podgląd dodanego posta">
-  <br/><sub>🔹 Widok nowo dodanego posta z obrazami i interakcjami</sub>
+**📷 Podgląd dodanego posta**
+<p align="center">
+  <img src="screenshots/add-post3.png" alt="Podgląd posta">
 </p>
 
 ---
 
 ### ✏️ Edycja posta
 
-> Edytuj treść, miejsce, zdjęcia lub kraj w istniejącym poście.
+> Możliwość zmiany tytułu, treści, lokalizacji, zdjęć oraz kraju.
 
+**📷 Formularz edycji posta**
 <p align="center">
   <img src="screenshots/edit-post1.png" alt="Formularz edycji posta">
-  <br/><sub>✏️ Formularz edycji istniejącego posta – dane do modyfikacji</sub><br/><br/>
+</p>
 
-  <img src="screenshots/edit-post2.png" alt="Zamiana drugiego zdjęcia">
-  <br/><sub>📷 Wybieranie nowego zdjęcia z komputera</sub><br/><br/>
+**📷 Wybieranie nowego zdjęcia**
+<p align="center">
+  <img src="screenshots/edit-post3.png" alt="Zamiana zdjęcia">
+</p>
 
-  <img src="screenshots/edit-post3.png" alt="Podgląd posta po edycji">
-  <br/><sub>📄 Widok posta po edycji – zaktualizowane zdjęcia i dane</sub><br/><br/>
+**📷 Widok po edycji posta**
+<p align="center">
+  <img src="screenshots/edit-post2.png" alt="Podgląd po edycji">
+</p>
 
-  <img src="screenshots/edit-post4.png" alt="Widok z menu edytuj/usuń">
-  <br/><sub>⚙️ Menu opcji posta: edytuj lub usuń</sub>
+**📷 Opcje edytowania i usuwania posta**
+<p align="center">
+  <img src="screenshots/edit-post4.png" alt="Menu edytuj/usuń">
 </p>
 
 
