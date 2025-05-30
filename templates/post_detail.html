@@ -1,12 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
+<!-- Sekcja posta -->
 <article class="mb-5 p-4 border rounded shadow-sm mx-auto" style="max-width: 800px; background-color: #ffffff;">
+    <!-- Przycisk powrotu do strony głównej -->
     <a href="{{ url_for('index') }}" class="btn btn-outline-secondary">← Powrót</a>
     <h2 class="text-center">{{ post.title }}</h2>
-    
+
+    <!-- Tytuł posta -->
     <p>{{ post.content }}</p>
 
+    <!-- Wyświetlanie jednego lub dwóch zdjęć jeśli istnieją -->
     {% if post.image or post.image2 %}
     <div class="d-flex justify-content-center gap-3 my-3">
         {% if post.image %}
@@ -20,7 +24,7 @@
 
 
 </article>
-
+<!-- Sekcja komentarzy -->
 <section class="mb-5 mx-auto" style="max-width: 800px;">
     <h4 class="mb-3">💬 Komentarze</h4>
     <div id="comments-list">
@@ -30,6 +34,7 @@
         {{ comment.content }}
     </div>
 
+    <!-- Dropdown z akcjami (edytuj, usuń) -->
     <div class="dropdown position-absolute top-0 end-0 m-2">
         <button class="btn btn-sm btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             ⋯
@@ -53,7 +58,7 @@
     {% endfor %}
 </div>
 </section>
-
+<!-- Formularz dodawania komentarza -->
 <section class="mb-5 mx-auto" style="max-width: 800px;">
     <h5 class="mb-3">Dodaj komentarz</h5>
     <form method="POST" id="comment-form">
@@ -65,26 +70,29 @@
          <button type="submit" class="btn btn-primary">Dodaj komentarz</button>
     </form>
 </section>
-
+<!-- JavaScript obsługujący AJAX dodawania komentarza -->
 <script>
 document.getElementById('comment-form').addEventListener('submit', function(e) {
     e.preventDefault();
-    const content = document.querySelector('#comment-form textarea').value;
+    const content = document.querySelector('#comment-form textarea').value; // Pobierz treść komentarza
     const postId = "{{ post.id }}";
 
     fetch(`/api/comments/${postId}`, {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json' // Informujemy, że dane to JSON
         },
-        body: JSON.stringify({ content: content })
+        body: JSON.stringify({ content: content }) // Wysyłamy treść komentarza
     })
     .then(response => response.json())
     .then(data => {
+        // Po dodaniu komentarza dynamicznie dodaj go na górę listy
         const newComment = document.createElement('div');
         newComment.className = "border rounded p-3 mb-3 bg-white shadow-sm";
         newComment.textContent = data.content;
+        // Dodanie nowego komentarza przed istniejącymi
         document.getElementById('comments-list').prepend(newComment);
+        // Wyczyść pole tekstowe
         document.querySelector('#comment-form textarea').value = "";
     });
 });

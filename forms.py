@@ -5,7 +5,7 @@ from wtforms.validators import DataRequired, URL, Optional
 from wtforms import SelectField
 from wtforms import SubmitField
 
-
+# Formularz dodawania / edycji posta
 class PostForm(FlaskForm):
     title = StringField("Tytuł", validators=[DataRequired()])
     content = TextAreaField("Treść", validators=[DataRequired()])
@@ -22,13 +22,6 @@ class PostForm(FlaskForm):
         ('Niemcy', 'Niemcy')
     ], validators=[Optional()])
     submit = SubmitField("Dodaj post")
-
-image = FileField("Zdjęcie (JPG, PNG)", validators=[
-    FileAllowed(['jpg', 'jpeg', 'png'], 'Tylko pliki JPG, PNG!')
-])
-image2 = FileField("Drugie zdjęcie (opcjonalnie)", validators=[
-    FileAllowed(['jpg', 'jpeg', 'png'], 'Tylko pliki JPG, PNG!')
-])
 
 class CommentForm(FlaskForm):
     content = TextAreaField("Treść komentarza", validators=[DataRequired()])

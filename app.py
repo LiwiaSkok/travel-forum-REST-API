@@ -1,3 +1,4 @@
+# Importy potrzebnych bibliotek i modułów Flask, SQLAlchemy, formularzy, przesyłania plików, itp.
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from forms import PostForm 
@@ -11,36 +12,39 @@ import os
 from werkzeug.utils import secure_filename
 from datetime import datetime #dodanie że post jest dodawany na stronę i ustawiony po czasie wstawienia
 
-
+# Konfiguracja aplikacji Flask
 app = Flask(__name__)
-app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "default-key")
-app.config['UPLOAD_FOLDER'] = 'static/uploads'
+app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "default-key")  # Klucz bezpieczeństwa dla CSRF
+app.config['UPLOAD_FOLDER'] = 'static/uploads'  # Ścieżka do folderu z przesyłanymi zdjęciami
 
+# Konfiguracja bazy danych SQLite
 basedir = os.path.abspath(os.path.dirname(__file__))
 app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{os.path.join(basedir, 'instance', 'posts.db')}"
 db = SQLAlchemy(app)
-migrate = Migrate(app, db)
+migrate = Migrate(app, db)  # Wspomaganie migracji bazy danych
 
 
 
 
-# Model Post
+
+# Model Post reprezentuje wpis/post
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100), nullable=False)
     content = db.Column(db.Text, nullable=False)
     location = db.Column(db.String(100), nullable=True)
     image = db.Column(db.String(300), nullable=True)
-    image2 = db.Column(db.String(300), nullable=True) #dodawanie drugiego zdjęcia
+    image2 = db.Column(db.String(300), nullable=True)
     country = db.Column(db.String(100), nullable=True)
     likes = db.Column(db.Integer, default=0)
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)  # automatyczna data dodania posta
      
     
 
     def __repr__(self):
         return f"<Post {self.id}>"
 
+# Model Comment - reprezentuje komentarz powiązany z postem
 class Comment(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.Text, nullable=False)
@@ -58,17 +62,20 @@ def index():
     posts = Post.query.order_by(Post.created_at.desc()).all()
     return render_template("index.html", posts=posts)
 
+# Dodawanie posta
 @app.route("/add", methods=["GET", "POST"])
 def add():
     form = PostForm()
     os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
     if form.validate_on_submit():
+        # Obsługa zdjęć
         file1 = form.image.data
         file2 = form.image2.data
 
         filename1 = None
         filename2 = None
 
+        # Zapis zdjęć na serwerze
         if file1:
             filename1 = secure_filename(file1.filename)
             file1.save(os.path.join(app.config['UPLOAD_FOLDER'], filename1))
@@ -77,6 +84,7 @@ def add():
             filename2 = secure_filename(file2.filename)
             file2.save(os.path.join(app.config['UPLOAD_FOLDER'], filename2))
 
+        # Tworzenie nowego posta
         new_post = Post(
             title=form.title.data,
             content=form.content.data,
@@ -90,7 +98,7 @@ def add():
         return redirect(url_for("index"))
     return render_template("add.html", form=form)
 
-
+# Edytowanie posta
 @app.route("/edit/<int:post_id>", methods=["GET", "POST"])
 def edit(post_id):
     post = Post.query.get_or_404(post_id)
@@ -100,11 +108,13 @@ def edit(post_id):
         file1 = form.image.data
         file2 = form.image2.data
 
+         # Aktualizacja pól posta
         post.title = form.title.data
         post.content = form.content.data
         post.location = form.location.data
         post.country = form.country.data
 
+        # Obsługa usuwania lub aktualizacji zdjęć
         # Usuwanie zdjęcia 1
         if request.form.get("remove_image"):
             post.image = None
@@ -127,7 +137,7 @@ def edit(post_id):
 
     return render_template("edit.html", form=form, post=post)
 
-
+# Szczegóły posta + dodawanie komentarzy
 @app.route("/post/<int:post_id>", methods=["GET", "POST"])
 def post_detail(post_id):
     post = Post.query.get_or_404(post_id)
@@ -140,7 +150,7 @@ def post_detail(post_id):
         return redirect(url_for("post_detail", post_id=post.id))
     return render_template("post_detail.html", post=post, form=form)
 
-
+# Usuwanie posta
 @app.route("/delete/<int:post_id>", methods=["POST"])
 def delete(post_id):
     post = Post.query.get_or_404(post_id)
@@ -172,13 +182,14 @@ def edit_comment(comment_id):
 
     return render_template("edit_comment.html", form=form, comment=comment)
 
-
+# Wyświetlanie postów z konkretnego kraju
 @app.route("/country/<country>")
 def posts_by_country(country):
     posts = Post.query.filter(func.lower(Post.country) == func.lower(country))\
                       .order_by(Post.created_at.desc()).all()
     return render_template("index.html", posts=posts)
 
+# Dodawanie lajków do posta (AJAX)
 @app.route("/like/<int:post_id>", methods=["POST"])
 def like(post_id):
     post = Post.query.get_or_404(post_id)
@@ -187,7 +198,7 @@ def like(post_id):
     return jsonify({"likes": post.likes})
 
 
-
+# API - Zwróć wszystkie posty jako JSON
 # Zwracanie wszystkich postów jako JSON
 @app.route("/api/posts", methods=["GET"])
 def api_get_posts():
@@ -218,7 +229,7 @@ def api_get_post(post_id):
 
 
 
-# Tworzenie posta przez JSON
+#API Tworzenie nowego posta przez JSON
 @app.route("/api/posts", methods=["POST"])
 def api_create_post():
     data = request.get_json()
@@ -235,7 +246,7 @@ def api_create_post():
     return jsonify({"message": "Post created", "id": new_post.id}), 201
   
 
-# Aktualizacja posta
+# API - Aktualizacja istniejącego posta
 @app.route("/api/posts/<int:post_id>", methods=["PUT"])
 def api_update_post(post_id):
     post = Post.query.get_or_404(post_id)
@@ -257,7 +268,7 @@ def api_delete_post(post_id):
     db.session.commit()
     return jsonify({"message": "Post deleted"})
 
-
+# API - Dodanie komentarza do posta
 @app.route("/api/comments/<int:post_id>", methods=["POST"])
 def api_add_comment(post_id):
     post = Post.query.get_or_404(post_id)
@@ -267,7 +278,9 @@ def api_add_comment(post_id):
     db.session.commit()
     return jsonify({"content": comment.content})
 
-#Zmina 
+
+# Uruchomienie aplikacji
+
 #if __name__ == "__main__":
  #   app.run(debug=True)
 

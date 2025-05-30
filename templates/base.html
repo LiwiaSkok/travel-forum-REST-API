@@ -11,9 +11,10 @@
      <script src="{{ url_for('static', filename='js/like.js') }}"></script>
 </head>
 <body style="background-color: #f8fcfc;">
-
+<!-- Nawigacja górna (navbar) -->
 <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm " style="background-color: #ffffff;">
   <div class="container ">
+    <!-- Logo -->
    <a class="navbar-brand fw-bold d-flex align-items-center ms-n4" href="/">
       <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" style="height: 32px " class=" me-3">
       
@@ -22,7 +23,7 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
-
+    <!-- Rozwijane menu -->
     <div class="collapse navbar-collapse" id="navbarMenu">
   <div class="d-flex flex-column flex-md-row align-items-end align-items-md-center justify-content-md-end w-100 gap-2">
     
@@ -54,26 +55,26 @@
 
   </div>
 </nav>
-
+<!-- Główna zawartość strony – wypełniana z szablonów rozszerzających -->
 <main class="container my-4">
     {% block content %}{% endblock %}
 </main>
-
+<!-- Stopka -->
 <footer class="text-center text-muted py-3 border-top">
     <small>&copy; 2025 Mój Blog Podróżniczy</small>
 </footer>
 
 </body>
 </html>
-
+<!-- Skrypt JS – obsługa kliknięcia przycisku lajka -->
 <script>
 document.addEventListener('click', async function (e) {
     if (e.target.matches('.like-btn')) {
         const button = e.target;
-        const postId = button.dataset.id;
-        const countSpan = button.querySelector('.like-count');
+        const postId = button.dataset.id; // ID posta z atrybutu data-id
+        const countSpan = button.querySelector('.like-count');  // Miejsce, gdzie wyświetlana jest liczba like
 
-        button.disabled = true;
+        button.disabled = true;  // Tymczasowe wyłączenie przycisku
 
         try {
             const response = await fetch(`/like/${postId}`, {
@@ -83,11 +84,11 @@ document.addEventListener('click', async function (e) {
             if (!response.ok) throw new Error('Błąd przy dodawaniu lajka');
 
             const data = await response.json();
-            countSpan.textContent = data.likes;
+            countSpan.textContent = data.likes;  // Aktualizacja liczby lajków
         } catch (error) {
-            console.error("Błąd:", error);
+            console.error("Błąd:", error); // Obsługa błędów
         } finally {
-            button.disabled = false;
+            button.disabled = false; // Ponowne włączenie przycisku
         }
     }
 });
