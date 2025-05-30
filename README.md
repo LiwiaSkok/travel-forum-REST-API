@@ -1,8 +1,15 @@
 # 🌍 Razem Przez Świat – Travel Forum
 
-> **Aplikacja webowa** do dzielenia się wspomnieniami z podróży.  
-> Umożliwia tworzenie i przeglądanie postów z komentarzami, lajkami i filtrowaniem po kraju.  
-> Udostępnia również pełne **REST API** w formacie **JSON**.
+## 🌐 Opis aplikacji
+
+**Razem Przez Świat** to aplikacja webowa służąca do dzielenia się wspomnieniami z podróży.
+
+Pozwala użytkownikom:
+- tworzyć i przeglądać posty z relacjami z różnych krajów,
+- dodawać komentarze i lajki,
+- filtrować posty według kraju.
+
+Dodatkowo udostępnia **pełne REST API** do zarządzania postami w formacie **JSON**.
 
 ![logo](screenshots/logo1.png)
 
@@ -77,36 +84,53 @@ Zobacz aplikację w akcji:
 
 ## 🖼️ Ekrany aplikacji
 
-> Przykładowe zrzuty ekranu z aplikacji:
-
 ### 🏠 Strona główna – lista postów + menu krajów
-![](screenshots/home-page3.png)
+
+<p align="center">
+  <img src="screenshots/home-page3.png" alt="Strona główna">
+</p>
 
 ### ➕ Dodawanie posta
-![](screenshots/add-post.png)  
-![](screenshots/add-post2.png)  
-![](screenshots/add-post3.png)
+
+<p align="center">
+  <img src="screenshots/add-post.png" alt="Dodawanie posta 1">
+  <img src="screenshots/add-post2.png" alt="Dodawanie posta 2">
+  <img src="screenshots/add-post3.png" alt="Dodawanie posta 3">
+</p>
 
 ### ✏️ Edycja posta
-![](screenshots/edit-post.png)  
-![](screenshots/edit-post3.png)  
-![](screenshots/edit-post2.png)  
-![](screenshots/edit-post4.png)
+
+<p align="center">
+  <img src="screenshots/edit-post.png" alt="Edycja posta 1">
+  <img src="screenshots/edit-post3.png" alt="Edycja posta 2">
+  <img src="screenshots/edit-post2.png" alt="Edycja posta 3">
+  <img src="screenshots/edit-post4.png" alt="Edycja posta 4">
+</p>
 
 ### 🗑️ Usuwanie zdjęcia
-![](screenshots/delete-photo.png)  
-![](screenshots/delete-photo2.png)
+
+<p align="center">
+  <img src="screenshots/delete-photo.png" alt="Usuwanie zdjęcia 1">
+  <img src="screenshots/delete-photo2.png" alt="Usuwanie zdjęcia 2">
+</p>
 
 ### 💬 Komentarze
-![](screenshots/add-comment.png)  
-![](screenshots/add-comment2.png)  
-![](screenshots/add-comment3.png)  
-![](screenshots/add-comment4.png)  
-![](screenshots/delete-comment.png)
+
+<p align="center">
+  <img src="screenshots/add-comment.png" alt="Komentarz 1">
+  <img src="screenshots/add-comment2.png" alt="Komentarz 2">
+  <img src="screenshots/add-comment3.png" alt="Komentarz 3">
+  <img src="screenshots/add-comment4.png" alt="Komentarz 4">
+  <img src="screenshots/delete-comment.png" alt="Usuwanie komentarza">
+</p>
 
 ### 🌐 Filtrowanie według kraju
-![](screenshots/tag.png)  
-![](screenshots/list.png)   
-![](screenshots/tag3.png)
+
+<p align="center">
+  <img src="screenshots/tag.png" alt="Tag kraju 1">
+  <img src="screenshots/list.png" alt="Lista krajów">
+  <img src="screenshots/tag3.png" alt="Tag kraju 2">
+</p>
+
 
 
