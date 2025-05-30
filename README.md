@@ -45,6 +45,14 @@ Zobacz działającą wersję na Render:
 ---
 
 ## Technologie 
+> Python 3.9+
+> Flask
+> Flask-SQLAlchemy
+> Flask-Migrate (Alembic)
+> Flask-WTF
+> Bootstrap 5
+
+SQLite
 ## 🖼️ Ekrany aplikacji
 
 ### Strona główna: lista postów z menu krajów & przyciskiem „Dodaj nowy post”
