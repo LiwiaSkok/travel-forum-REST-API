@@ -120,12 +120,12 @@ Zobacz aplikację w akcji:
 
 > Możliwość zmiany tytułu, treści, lokalizacji, zdjęć oraz kraju.
 
-**📷 Formularz edycji posta**
+**📷 Menu z wyborem "Edycja" lub "Usuń" posta**
 <p align="center">
   <img src="screenshots/edit-post1.png" alt="Formularz edycji posta">
 </p>
 
-**📷 Opcje edytowania i usuwania posta**
+**📷 Opcje edytowania posta**
 <p align="center">
   <img src="screenshots/edit-post2.png" alt="Zamiana zdjęcia">
 </p>
@@ -175,14 +175,13 @@ Zobacz aplikację w akcji:
 
 ### 🗨️ Edycja komentarzy
 
-> Sekcja komentarzy z możliwością dodania nowego wpisu.
 
 **📷 Dodanie komentarzy które chcielibyśmy edytować**
 <p align="center">
   <img src="screenshots/add-comment3.png" alt="Dodaj komentarz">
 </p>
 
-**📷 Menu opcji komentarza: edytuj lub usuń**
+**📷 Menu opcji komentarza "Edytuj" lub "Usuń"**
 <p align="center">
   <img src="screenshots/add-comment4.png" alt="Komentarze użytkowników">
 </p>
@@ -191,7 +190,7 @@ Zobacz aplikację w akcji:
 
 ### ✏️ Edycja komentarza
 
-> Komentarze można również edytować lub usunąć.
+> Komentarze można również edytować
 
 **📷 Formularz edycji komentarza**
 <p align="center">
