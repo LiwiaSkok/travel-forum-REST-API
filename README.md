@@ -125,17 +125,17 @@ Zobacz aplikację w akcji:
   <img src="screenshots/edit-post1.png" alt="Formularz edycji posta">
 </p>
 
-**📷 Wybieranie nowego zdjęcia**
+**📷 Opcje edytowania i usuwania posta**
 <p align="center">
   <img src="screenshots/edit-post2.png" alt="Zamiana zdjęcia">
 </p>
 
-**📷 Widok po edycji posta**
+**📷 Wybieranie nowego zdjęcia**
 <p align="center">
   <img src="screenshots/edit-post3.png" alt="Podgląd po edycji">
 </p>
 
-**📷 Opcje edytowania i usuwania posta**
+**📷 Widok po edycji posta**
 <p align="center">
   <img src="screenshots/edit-post4.png" alt="Menu edytuj/usuń">
 </p>
