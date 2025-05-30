@@ -14,6 +14,7 @@ from datetime import datetime #dodanie że post jest dodawany na stronę i ustaw
 
 # Konfiguracja aplikacji Flask
 app = Flask(__name__)
+#app.config["SECRET_KEY"] = "tajny_klucz_123"
 app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "default-key")  # Klucz bezpieczeństwa dla CSRF
 app.config['UPLOAD_FOLDER'] = 'static/uploads'  # Ścieżka do folderu z przesyłanymi zdjęciami
 
@@ -282,9 +283,9 @@ def api_add_comment(post_id):
 # Uruchomienie aplikacji
 
 #if __name__ == "__main__":
- #   app.run(debug=True)
+  #app.run(debug=True)
 
 if __name__ == "__main__":
-    app.run()
+   app.run()
 
 
