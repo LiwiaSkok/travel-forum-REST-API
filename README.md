@@ -118,4 +118,4 @@ Zobacz aplikację w akcji:
 
 ## Struktura katalogów 
 
-<pre lang="markdown"> ## 📁 Struktura katalogów ``` travel-forum/ │ ├── app/ │ ├── static/ │ │ ├── css/ │ │ └── uploads/ │ ├── templates/ │ │ ├── base.html │ │ ├── home.html │ │ ├── post_form.html │ │ └── ... │ ├── models.py │ ├── routes.py │ ├── forms.py │ └── __init__.py │ ├── migrations/ │ ├── screenshots/ │ └── *.png │ ├── config.py ├── run.py ├── requirements.txt └── README.md ``` </pre>
+<pre> ## 📁 Struktura katalogów <code> travel-forum/ │ ├── app/ │ ├── static/ │ │ ├── css/ │ │ └── uploads/ │ ├── templates/ │ │ ├── base.html │ │ ├── home.html │ │ ├── post_form.html │ │ └── ... │ ├── models.py │ ├── routes.py │ ├── forms.py │ └── __init__.py │ ├── migrations/ │ ├── screenshots/ │ └── *.png │ ├── config.py ├── run.py ├── requirements.txt └── README.md </code> </pre>
