@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Edytuj post</h2>
+
+<!-- Poprawiony formularz -->
+<form method="POST" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+
+    <div class="mb-3">
+        {{ form.title.label(class="form-label") }}
+        {{ form.title(class="form-control") }}
+    </div>
+
+    <div class="mb-3">
+        {{ form.content.label(class="form-label") }}
+        {{ form.content(class="form-control") }}
+    </div>
+
+    <div class="mb-3">
+        {{ form.location.label(class="form-label") }}
+        {{ form.location(class="form-control") }}
+    </div>
+
+    <div class="mb-3">
+        {{ form.image.label(class="form-label") }}
+        {{ form.image(class="form-control") }}
+    </div>
+
+    {% if post.image %}
+    <div class="mb-3">
+        <label>Obecne zdjęcie 1:</label><br>
+        <img src="{{ post.image }}" style="max-width: 150px;">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="remove_image" id="remove_image">
+            <label class="form-check-label" for="remove_image">Usuń to zdjęcie</label>
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="mb-3">
+        {{ form.image2.label(class="form-label") }}
+        {{ form.image2(class="form-control") }}
+    </div>
+
+    {% if post.image2 %}
+    <div class="mb-3">
+        <label>Obecne zdjęcie 2:</label><br>
+        <img src="{{ post.image2 }}" style="max-width: 150px;">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="remove_image2" id="remove_image2">
+            <label class="form-check-label" for="remove_image2">Usuń to zdjęcie</label>
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="mb-3">
+        {{ form.country.label(class="form-label") }}
+        {{ form.country(class="form-select") }}
+    </div>
+
+    <button type="submit" class="btn btn-primary">{{ form.submit.label.text }}</button>
+    <a href="{{ url_for('index') }}" class="btn btn-secondary">Anuluj</a>
+</form>
+{% endblock %}

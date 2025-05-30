@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="mb-5 p-4 border rounded shadow-sm mx-auto" style="max-width: 800px; background-color: #ffffff;">
+    <a href="{{ url_for('index') }}" class="btn btn-outline-secondary">← Powrót</a>
+    <h2 class="text-center">{{ post.title }}</h2>
+    
+    <p>{{ post.content }}</p>
+
+    {% if post.image or post.image2 %}
+    <div class="d-flex justify-content-center gap-3 my-3">
+        {% if post.image %}
+            <img src="{{ post.image }}" alt="Zdjęcie" class="img-fluid rounded shadow-sm" style="max-width: 100px; height: auto;">
+        {% endif %}
+        {% if post.image2 %}
+            <img src="{{ post.image2 }}" alt="Zdjęcie 2" class="img-fluid rounded shadow-sm" style="max-width: 100px; height: auto;">
+        {% endif %}
+    </div>
+{% endif %}
+
+
+</article>
+
+<section class="mb-5 mx-auto" style="max-width: 800px;">
+    <h4 class="mb-3">💬 Komentarze</h4>
+    <div id="comments-list">
+    {% for comment in post.comments %}
+        <div class="border rounded p-3 mb-3 bg-white shadow-sm position-relative">
+    <div style="max-width: 90%; word-wrap: break-word;">
+        {{ comment.content }}
+    </div>
+
+    <div class="dropdown position-absolute top-0 end-0 m-2">
+        <button class="btn btn-sm btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            ⋯
+        </button>
+        <ul class="dropdown-menu">
+            <li>
+                <a class="dropdown-item" href="{{ url_for('edit_comment', comment_id=comment.id) }}">Edytuj</a>
+            </li>
+            <li>
+                <form action="{{ url_for('delete_comment', comment_id=comment.id) }}" method="POST" style="margin: 0;">
+                    <button type="submit" class="dropdown-item text-danger" onclick="return confirm('Na pewno usunąć komentarz?')">
+                        Usuń
+                    </button>
+                </form>
+            </li>
+        </ul>
+    </div>
+</div>
+    {% else %}
+        <p class="text-muted">Brak komentarzy.</p>
+    {% endfor %}
+</div>
+</section>
+
+<section class="mb-5 mx-auto" style="max-width: 800px;">
+    <h5 class="mb-3">Dodaj komentarz</h5>
+    <form method="POST" id="comment-form">
+        {{ form.hidden_tag() }}
+        <div class="mb-3">
+            {{ form.content.label(class="form-label") }}
+            {{ form.content(class="form-control", rows="4") }}
+        </div>
+         <button type="submit" class="btn btn-primary">Dodaj komentarz</button>
+    </form>
+</section>
+
+<script>
+document.getElementById('comment-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const content = document.querySelector('#comment-form textarea').value;
+    const postId = "{{ post.id }}";
+
+    fetch(`/api/comments/${postId}`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ content: content })
+    })
+    .then(response => response.json())
+    .then(data => {
+        const newComment = document.createElement('div');
+        newComment.className = "border rounded p-3 mb-3 bg-white shadow-sm";
+        newComment.textContent = data.content;
+        document.getElementById('comments-list').prepend(newComment);
+        document.querySelector('#comment-form textarea').value = "";
+    });
+});
+</script>
+
+{% endblock %}

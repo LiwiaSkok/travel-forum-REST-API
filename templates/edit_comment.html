@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="mx-auto my-5 p-4 border rounded shadow-sm" style="max-width: 600px; background-color: #f8f9fa;">
+    <h3>Edytuj komentarz</h3>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="mb-3">
+            {{ form.content.label(class="form-label") }}
+            {{ form.content(class="form-control", rows="4") }}
+        </div>
+        <button type="submit" class="btn btn-primary">Zapisz zmiany</button>
+        <a href="{{ url_for('post_detail', post_id=comment.post_id) }}" class="btn btn-secondary ms-2">Anuluj</a>
+    </form>
+</article>
+{% endblock %}
