@@ -150,7 +150,7 @@ Zobacz aplikację w akcji:
   <img src="screenshots/delete-photo.png" alt="Usuń zdjęcie 1">
 </p>
 
-**📷 Drugie zdjęcie z opcją do usunięcia**
+**📷 Podgląd posta po usunięciu zdjęcia**
 <p align="center">
   <img src="screenshots/delete-photo2.png" alt="Usuń zdjęcie 2">
 </p>
@@ -166,23 +166,23 @@ Zobacz aplikację w akcji:
   <img src="screenshots/add-comment.png" alt="Komentarz i lajk">
 </p>
 
-**📷 Lista komentarzy z ikonami i menu opcji**
+**📷 Formularz dodania komentarza oraz mini podgląd posta**
 <p align="center">
   <img src="screenshots/add-comment2.png" alt="Lista komentarzy">
 </p>
 
 ---
 
-### 🗨️ Widok komentarzy pod postem
+### 🗨️ Edycja komentarzy
 
 > Sekcja komentarzy z możliwością dodania nowego wpisu.
 
-**📷 Widok posta z komentarzami i polem dodawania**
+**📷 Dodanie komentarzy które chcielibyśmy edytować**
 <p align="center">
   <img src="screenshots/add-comment3.png" alt="Dodaj komentarz">
 </p>
 
-**📷 Lista komentarzy pod postem – różne treści**
+**📷 Menu opcji komentarza: edytuj lub usuń**
 <p align="center">
   <img src="screenshots/add-comment4.png" alt="Komentarze użytkowników">
 </p>
@@ -193,12 +193,12 @@ Zobacz aplikację w akcji:
 
 > Komentarze można również edytować lub usunąć.
 
-**📷 Menu opcji komentarza: edytuj lub usuń**
+**📷 Formularz edycji komentarza**
 <p align="center">
   <img src="screenshots/edit-comment.png" alt="Opcje komentarza">
 </p>
 
-**📷 Formularz edycji komentarza**
+**📷 Poprawione komentarze po użyciu opcji edytuj**
 <p align="center">
   <img src="screenshots/edit-comment2.png" alt="Edytowanie komentarza">
 </p>
@@ -209,20 +209,22 @@ Zobacz aplikację w akcji:
 
 > Komentarz można bezpiecznie usunąć jednym kliknięciem.
 
-**📷 Przykład komentarza z przyciskiem „Usuń”**
+**📷 Przykład komentarza z danymi osobowymi i opcją usunięcia**
 <p align="center">
   <img src="screenshots/delete-comment.png" alt="Usuwanie komentarza">
 </p>
 
 ### 🌍 Filtrowanie postów po kraju
 
-> Aplikacja umożliwia filtrowanie postów według kraju podróży.  
-> Po kliknięciu w nazwę kraju (np. **Włochy**) użytkownik zostaje przeniesiony do strony `/Włochy`, gdzie widoczne są tylko posty z tego kraju.
+> Podczas dodawania posta użytkownik wybiera kraj z listy rozwijanej.  
+> Wybrany kraj (np. **Włochy**) staje się tagiem przypisanym do posta i umożliwia późniejsze filtrowanie treści według państw.
 
-**📷 Lista krajów z flagami – filtracja według państwa**
+**📷 Wybranie taga – np. Włochy – w formularzu dodania posta**
 <p align="center">
   <img src="screenshots/tag.png" alt="Dropdown filtrujący posty po kraju">
 </p>
+
+> Umożliwia wybór konkretnego kraju, który chcesz obejrzeć – np. klikając „Włochy” zobaczysz tylko posty z tego kraju.
 
 **📷 Rozwijane menu „Relacje z podróży” z ikonami flag**
 <p align="center">
