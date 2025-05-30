@@ -89,13 +89,13 @@ Zobacz aplikację w akcji:
 
 ### ✏️ Edycja posta
 ![](screenshots/edit-post.png)  
-![](screenshots/edit-post2.png)  
 ![](screenshots/edit-post3.png)  
+![](screenshots/edit-post2.png)  
 ![](screenshots/edit-post4.png)
 
 ### 🗑️ Usuwanie zdjęcia
 ![](screenshots/delete-photo.png)  
-![](screenshots/delete-photo3.png)
+![](screenshots/delete-photo2.png)
 
 ### 💬 Komentarze
 ![](screenshots/add-comment.png)  
