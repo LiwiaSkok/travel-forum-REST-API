@@ -1,79 +1,145 @@
-![logo](/screenshots/logo1.png)
+# 🌍 Razem Przez Świat – Travel Forum
 
-> **Travel Forum**  
-> Aplikacja webowa „Razem Przez Świat” pozwala na tworzenie, przeglądanie i zarządzanie postami podróżniczymi z funkcjami komentarzy, lajków oraz filtrowania po kraju. Udostępnia też pełne REST API dla CRUD w formacie JSON.
+> **Aplikacja webowa** do dzielenia się wspomnieniami z podróży.  
+> Umożliwia tworzenie i przeglądanie postów z komentarzami, lajkami i filtrowaniem po kraju.  
+> Udostępnia również pełne **REST API** w formacie **JSON**.
+
+![logo](screenshots/logo1.png)
 
 ---
 
 ## 🚀 Demo
 
-Zobacz działającą wersję na Render:
-**https://travel-forum-rest-api-2.onrender.com/**
+Zobacz aplikację w akcji:  
+👉 **[https://travel-forum-rest-api-2.onrender.com/](https://travel-forum-rest-api-2.onrender.com/)**
 
+---
 
 ## 📋 Spis treści
 
-1. [Funkcjonalności](#funkcjonalności)  
-3. [Technologie](#technologie) 
-2. [Ekrany aplikacji](#ekrany-aplikacji)  
-
- 
+1. [🔥 Funkcjonalności](#-funkcjonalności)  
+2. [🛠 Technologie](#-technologie)  
+3. [🖼️ Ekrany aplikacji](#-ekrany-aplikacji)
+4. [📁 Struktura katalogów](#struktura-katalogów)
 
 ---
 
 ## 🔥 Funkcjonalności
 
-- **CRUD postów**  
-  - dodawanie tytułu, treści, lokalizacji, jednego lub dwóch zdjęć oraz wyboru kraju  
-  - edycja i usuwanie posta  
-  - usuwanie pojedynczego zdjęcia przy edycji  
-- **Komentarze**  
-  - dodawanie, edycja i usuwanie komentarzy pod każdym postem  
-- **Lajki**  
-  - prosty system „❤️ Lubię to”  
-  - licznik lajków  
-- **Filtrowanie**  
-  - rozwijane menu „Relacje z podróży” z listą krajów (z ikonami flag)  
-  - po kliknięciu – wyświetlenie tylko postów z danego kraju  
-- **REST API**  
-  - wszystkie posty GET `/api/posts`  
+### 📝 Posty (CRUD)
+- Dodawanie posta z:
+  - tytułem
+  - treścią
+  - lokalizacją
+  - wyborem kraju
+  - 1–2 zdjęciami
+- Edycja i usuwanie postów
+- Możliwość usunięcia pojedynczego zdjęcia przy edycji
+
+### 💬 Komentarze
+- Dodawanie komentarzy pod postami
+- Edycja i usuwanie komentarzy
+
+### ❤️ Lajki
+- Przycisk „❤️ Lubię to”
+- Licznik lajków
+
+### 🌍 Filtrowanie po kraju
+- Rozwijane menu „Relacje z podróży” z ikonami flag
+- Po kliknięciu – wyświetlanie postów z danego kraju
+
+### 🔄 REST API (format JSON)
+- wszystkie posty GET `/api/posts`  
   - pojedynczy post GET `/api/posts/<id>`  
   - tworzenie POST `/api/posts`  
   - aktualizacja PUT `/api/posts/<id>`  
-  - usuwanie DELETE `/api/posts/<id>`  
+  - usuwanie DELETE `/api/posts/<id>` 
 
 ---
 
-## Technologie 
-> Python 3.9+
-> Flask
-> Flask-SQLAlchemy
-> Flask-Migrate (Alembic)
-> Flask-WTF
-> Bootstrap 5
+## 🛠 Technologie
 
-SQLite
+> **Backend:**  
+> Python 3.9+  
+> Flask  
+> Flask-SQLAlchemy  
+> Flask-Migrate (Alembic)  
+> Flask-WTF  
+
+> **Frontend:**  
+> HTML5  
+> CSS3  
+> Bootstrap 5  
+
+> **Baza danych:**  
+> SQLite
+
+---
+
 ## 🖼️ Ekrany aplikacji
 
-### Strona główna: lista postów z menu krajów & przyciskiem „Dodaj nowy post”
+> Przykładowe zrzuty ekranu z aplikacji:
 
-![1](screenshots/home-page3.png)
-![3](screenshots/add-post.png)
-![4](screenshots/add-post2.png)
-![5](screenshots/add-post3.png)
-![6](screenshots/edit-post.png)
-![7](screenshots/edit-post3.png)
-![8](screenshots/edit-post2.png)
-![9](screenshots/edit-post4.png)
-![10](screenshots/delete-photo.png)
-![12](screenshots/delete-photo3.png)
-![13](screenshots/add-comment.png)
-![14](screenshots/add-comment2.png)
-![15](screenshots/add-comment3.png)
-![16](screenshots/add-comment4.png)
-![16](screenshots/delete-comment.png)
-![17](screenshots/list.png)
-![18](screenshots/tag.png)
-![19](screenshots/tag2.png)
-![20](screenshots/tag3.png)
-![21](screenshots/design.png)
+### 🏠 Strona główna – lista postów + menu krajów
+![](screenshots/home-page3.png)
+
+### ➕ Dodawanie posta
+![](screenshots/add-post.png)  
+![](screenshots/add-post2.png)  
+![](screenshots/add-post3.png)
+
+### ✏️ Edycja posta
+![](screenshots/edit-post.png)  
+![](screenshots/edit-post2.png)  
+![](screenshots/edit-post3.png)  
+![](screenshots/edit-post4.png)
+
+### 🗑️ Usuwanie zdjęcia
+![](screenshots/delete-photo.png)  
+![](screenshots/delete-photo3.png)
+
+### 💬 Komentarze
+![](screenshots/add-comment.png)  
+![](screenshots/add-comment2.png)  
+![](screenshots/add-comment3.png)  
+![](screenshots/add-comment4.png)  
+![](screenshots/delete-comment.png)
+
+### 🌐 Filtrowanie według kraju
+![](screenshots/list.png)  
+![](screenshots/tag.png)  
+![](screenshots/tag2.png)  
+![](screenshots/tag3.png)
+
+### 🎨 Design aplikacji
+![](screenshots/design.png)
+
+---
+
+## Struktura katalogów 
+
+travel-forum/
+│
+├── app/
+│   ├── static/
+│   │   ├── css/
+│   │   └── uploads/
+│   ├── templates/
+│   │   ├── base.html
+│   │   ├── home.html
+│   │   ├── post_form.html
+│   │   └── ...
+│   ├── models.py
+│   ├── routes.py
+│   ├── forms.py
+│   └── __init__.py
+│
+├── migrations/
+│
+├── screenshots/
+│   └── *.png
+│
+├── config.py
+├── run.py
+├── requirements.txt
+└── README.md
