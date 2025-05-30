@@ -20,7 +20,6 @@ Zobacz aplikację w akcji:
 1. [🔥 Funkcjonalności](#-funkcjonalności)  
 2. [🛠 Technologie](#-technologie)  
 3. [🖼️ Ekrany aplikacji](#-ekrany-aplikacji)
-4. [📁 Struktura katalogów](#struktura-katalogów)
 
 ---
 
@@ -114,8 +113,3 @@ Zobacz aplikację w akcji:
 ### 🎨 Design aplikacji
 ![](screenshots/design.png)
 
----
-
-## Struktura katalogów 
-
-<pre lang="markdown"> ## 📁 Struktura katalogów ``` travel-forum/ │ ├── app/ │ ├── static/ │ │ ├── css/ │ │ └── uploads/ │ ├── templates/ │ │ ├── base.html │ │ ├── home.html │ │ ├── post_form.html │ │ └── ... │ ├── models.py │ ├── routes.py │ ├── forms.py │ └── __init__.py │ ├── migrations/ │ ├── screenshots/ │ └── *.png │ ├── config.py ├── run.py ├── requirements.txt └── README.md ``` </pre>
