@@ -16,7 +16,8 @@ app = Flask(__name__)
 app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "default-key")
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///posts.db'
+basedir = os.path.abspath(os.path.dirname(__file__))
+app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{os.path.join(basedir, 'instance', 'posts.db')}"
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
