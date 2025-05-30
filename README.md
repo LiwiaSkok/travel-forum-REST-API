@@ -143,7 +143,7 @@ Zobacz aplikację w akcji:
 
 ### 🗑️ Usuwanie zdjęcia z posta
 
-> Możesz usunąć pojedyncze zdjęcie z posta podczas edycji.
+> Możesz usunąć zdjęcie lub zdjęcia z posta podczas edycji.
 
 **📷 Obecne zdjęcie i opcja usunięcia**
 <p align="center">
