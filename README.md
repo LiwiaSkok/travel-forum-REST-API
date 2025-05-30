@@ -84,28 +84,51 @@ Zobacz aplikację w akcji:
 
 ## 🖼️ Ekrany aplikacji
 
-### 🏠 Strona główna – lista postów + menu krajów
+### 🏠 Strona główna – przegląd postów
+
+> Widok listy wszystkich postów z możliwością filtrowania po kraju i dodania nowego wpisu.
 
 <p align="center">
-  <img src="screenshots/home-page3.png" alt="Strona główna">
+  <img src="screenshots/home-page3.png" alt="Strona główna – lista postów i menu krajów">
 </p>
 
-### ➕ Dodawanie posta
+---
+
+### ➕ Dodawanie posta – formularz
+
+> Użytkownik może utworzyć nowy post podróżniczy, dodając dane i zdjęcia.
 
 <p align="center">
-  <img src="screenshots/add-post.png" alt="Dodawanie posta 1">
-  <img src="screenshots/add-post2.png" alt="Dodawanie posta 2">
-  <img src="screenshots/add-post3.png" alt="Dodawanie posta 3">
+  <img src="screenshots/add-post.png" alt="Formularz dodawania nowego posta – pusty">
+  <br/><sub>🔹 Pusty formularz dodawania posta</sub><br/><br/>
+
+  <img src="screenshots/add-post2.png" alt="Wypełnianie formularza posta">
+  <br/><sub>🔹 Uzupełnianie danych: tytuł, treść, miejsce, zdjęcia, kraj</sub><br/><br/>
+
+  <img src="screenshots/add-post3.png" alt="Podgląd dodanego posta">
+  <br/><sub>🔹 Widok nowo dodanego posta z obrazami i interakcjami</sub>
 </p>
+
+---
 
 ### ✏️ Edycja posta
 
+> Edytuj treść, miejsce, zdjęcia lub kraj w istniejącym poście.
+
 <p align="center">
-  <img src="screenshots/edit-post.png" alt="Edycja posta 1">
-  <img src="screenshots/edit-post3.png" alt="Edycja posta 2">
-  <img src="screenshots/edit-post2.png" alt="Edycja posta 3">
-  <img src="screenshots/edit-post4.png" alt="Edycja posta 4">
+  <img src="screenshots/edit-post1.png" alt="Formularz edycji posta">
+  <br/><sub>✏️ Formularz edycji istniejącego posta – dane do modyfikacji</sub><br/><br/>
+
+  <img src="screenshots/edit-post2.png" alt="Zamiana drugiego zdjęcia">
+  <br/><sub>📷 Wybieranie nowego zdjęcia z komputera</sub><br/><br/>
+
+  <img src="screenshots/edit-post3.png" alt="Podgląd posta po edycji">
+  <br/><sub>📄 Widok posta po edycji – zaktualizowane zdjęcia i dane</sub><br/><br/>
+
+  <img src="screenshots/edit-post4.png" alt="Widok z menu edytuj/usuń">
+  <br/><sub>⚙️ Menu opcji posta: edytuj lub usuń</sub>
 </p>
+
 
 ### 🗑️ Usuwanie zdjęcia
 
